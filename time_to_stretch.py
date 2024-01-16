@@ -8,6 +8,7 @@ short_duration = 300
 long_duration = 600
 interruption = 0.3
 pause = 3600
+time_now = datetime.time.now().strftime('%H:%M')
 
 def single_beep():
     winsound.Beep(low_freq, short_duration)
@@ -41,26 +42,26 @@ def outro():
 intro()
 for i in range(2):
     time.sleep(pause)
-    print(f"{datetime.time.now().strftime('%H:%M')} - Time to stretch!")
+    print(f"{time_now} - Time to stretch!")
     single_beep()
     time.sleep(pause)
-    print(f"{datetime.time.now().strftime('%H:%M')} - Time to move!")
+    print(f"{time_now} - Time to move!")
     double_beep()
 
 # lunch time
 time.sleep(pause)
-print(f"{datetime.time.now().strftime('%H:%M')} - Lunch time!")
+print(f"{time_now} - Lunch time!")
 double_beep()
 double_beep()
 
 # afternoon
 for i in range(2):
     time.sleep(pause)
-    print(f"{datetime.time.now().strftime('%H:%M')} - Time to stretch!")
+    print(f"{time_now} - Time to stretch!")
     single_beep()
     time.sleep(pause)
-    print(f"{datetime.time.now().strftime('%H:%M')} - Time to move!")
+    print(f"{time_now} - Time to move!")
     double_beep()
-print(f"{datetime.time.now().strftime('%H:%M')} - Time to go home!")
+print(f"{time_now} - Time to go home!")
 final_beep()
 outro()
