@@ -23,29 +23,29 @@ def final_beep():
         time.sleep(interruption)
 
 # morning
-print(f'The script started at {datetime.now()}')
+print(f"The script started at {datetime.now()}")
 for i in range(2):
     time.sleep(pause)
-    print(f'{datetime.time.now().strftime('%H:%M')} - Time to stretch!')
+    print(f"{datetime.time.now().strftime('%H:%M')} - Time to stretch!")
     single_beep()
     time.sleep(pause)
-    print(f'{datetime.time.now().strftime('%H:%M')} - Time to move!')
+    print(f"{datetime.time.now().strftime('%H:%M')} - Time to move!")
     double_beep()
 
 # lunch time
 time.sleep(pause)
-print(f'{datetime.time.now().strftime('%H:%M')} - Lunch time!')
+print(f"{datetime.time.now().strftime('%H:%M')} - Lunch time!")
 double_beep()
 double_beep()
 
 # afternoon
 for i in range(2):
     time.sleep(pause)
-    print(f'{datetime.time.now().strftime('%H:%M')} - Time to stretch!')
+    print(f"{datetime.time.now().strftime('%H:%M')} - Time to stretch!")
     single_beep()
     time.sleep(pause)
-    print(f'{datetime.time.now().strftime('%H:%M')} - Time to move!')
+    print(f"{datetime.time.now().strftime('%H:%M')} - Time to move!")
     double_beep()
-print(f'{datetime.time.now().strftime('%H:%M')} - Time to go home!')
+print(f"{datetime.time.now().strftime('%H:%M')} - Time to go home!")
 final_beep()
-print(f'The script finished at {datetime.datetime.now()}')
+print(f"The script finished at {datetime.datetime.now()}")
