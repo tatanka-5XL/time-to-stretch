@@ -26,19 +26,26 @@ def final_beep():
 print(f'The script started at {datetime.datetime.now()}')
 for i in range(2):
     time.sleep(pause)
+    print('Time to stretch!')
     single_beep()
     time.sleep(pause)
+    print('Time to move!')
     double_beep()
-double_beep()
+
 # lunch time
 time.sleep(pause)
+print('Lunch time!')
 double_beep()
 double_beep()
+
 # afternoon
 for i in range(2):
     time.sleep(pause)
+    print('Time to stretch!')
     single_beep()
     time.sleep(pause)
+    print('Time to move!')
     double_beep()
+print('Time to go home!')
 final_beep()
 print(f'The script finished at {datetime.datetime.now()}')
