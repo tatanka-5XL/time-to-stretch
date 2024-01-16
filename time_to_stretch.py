@@ -8,7 +8,7 @@ short_duration = 300
 long_duration = 600
 interruption = 0.3
 pause = 3600
-time_now = datetime.time.now().strftime('%H:%M')
+time_now = datetime.now().strftime('%H:%M')
 
 def single_beep():
     winsound.Beep(low_freq, short_duration)
@@ -23,23 +23,14 @@ def final_beep():
         winsound.Beep(high_freq, long_duration)
         time.sleep(interruption)
 
-def write(message):
+def print_and_write(message):
+    print(message)
     with open ("history.txt", "a") as fh:
         fh.writelines(message)
 
-def intro():
-    intro_message = f"The script started at {datetime.now()}\n"
-    print(intro_message)
-    write(intro_message)
-
-def outro():
-    outro_message = f"The script finished at {datetime.now()}\n\n"
-    print(outro_message)
-    write(outro_message)
-
 
 # morning
-intro()
+print_and_write(f"The script started at {datetime.now()}\n")
 for i in range(2):
     time.sleep(pause)
     print(f"{time_now} - Time to stretch!")
@@ -64,4 +55,4 @@ for i in range(2):
     double_beep()
 print(f"{time_now} - Time to go home!")
 final_beep()
-outro()
+print_and_write(f"The script finished at {datetime.now()}\n\n")
